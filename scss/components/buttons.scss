@@ -980,6 +980,7 @@
 
 .btn {
   &.btn-primary {
+    width: $primaryButtonWidth;
     height: $primaryButtonHeight;
     background-color: $primaryButtonColor;
     color: $primaryButtonTextColor;
