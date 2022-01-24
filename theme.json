@@ -16741,19 +16741,12 @@
                       ".chat-holder .top-header",
                       ".chat-area",
                       ".contacts-holder-overlay",
-                      ".group-name-holder",
                       ".group-participants-holder",
                       ".chat-area .chat-top-header",
                       ".contacts-holder-overlay .contacts-top-header",
                       ".group-name-holder .group-top-header",
                       ".group-participants-holder .group-participants-top-header",
-                      ".chat-card-holder",
-                      ".contact-card",
-                      ".contact-image-wrapper .fa-times",
-                      ".group-name-field-holder .group-name-field",
                       ".chat-input-controls",
-                      ".chat-input-controls .image-preview-holder",
-                      ".section-label-wrapper .search-holder .form-control",
                       ".input-first-row textarea"
                     ],
                     "properties": ["background-color"]
@@ -16781,14 +16774,15 @@
               },
               {
                 "name": "chatHeadingsColor",
-                "default": "$headingOneColor",
+                "default": "$quickTextColor",
                 "columns": 12,
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
                     "selectors": [
                       ".chat-holder .header-title",
-                      ".chat-holder .chat-user-name"
+                      ".chat-holder .contacts-top-header .contacts-info",
+                      ".chat-holder .group-top-header .group-info"
                     ],
                     "properties": ["color"]
                   }
@@ -16815,12 +16809,9 @@
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
                     "selectors": [
                       ".chat-holder",
-                      ".chat-holder .chat-user-preview-holder .chat-user-preview",
                       ".chat-holder .chat-users-group span",
-                      ".group-name-field-holder .group-name-field",
                       ".chat.editing.chat-left .chat-body",
                       ".chat.editing.chat-right .chat-body",
-                      ".section-label-wrapper .search-holder .form-control",
                       ".input-first-row textarea"
                     ],
                     "properties": ["color"]
@@ -16903,9 +16894,9 @@
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
                     "selectors": [
-                      ".chat-holder .profile-image-holder"
+                      ".chat-holder .contacts-top-header .btn"
                     ],
-                    "properties": ["background-color"]
+                    "properties": ["color"]
                   }
                 ],
                 "breakpoints": {
@@ -16929,7 +16920,8 @@
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
                     "selectors": [
-                      ".chat-holder .profile-image-holder"
+                      ".chat-holder .chat-card-holder",
+                      ".chat-holder .contact-card"
                     ],
                     "properties": ["background-color"]
                   }
@@ -16955,9 +16947,10 @@
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
                     "selectors": [
-                      ".chat-holder .profile-image-holder"
+                      ".chat-holder .chat-card-holder .chat-info",
+                      ".chat-holder .chat-card-holder .chat-info .chat-user-preview"
                     ],
-                    "properties": ["background-color"]
+                    "properties": ["color"]
                   }
                 ],
                 "breakpoints": {
@@ -16980,9 +16973,7 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
-                    "selectors": [
-                      ".chat-holder .profile-image-holder"
-                    ],
+                    "selectors": "",
                     "properties": ["background-color"]
                   }
                 ],
@@ -17006,10 +16997,8 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
-                    "selectors": [
-                      ".chat-holder .profile-image-holder"
-                    ],
-                    "properties": ["background-color"]
+                    "selectors": "",
+                    "properties": ["color"]
                   }
                 ],
                 "breakpoints": {
@@ -17033,7 +17022,7 @@
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
                     "selectors": [
-                      ".chat-holder .profile-image-holder"
+                      ".chat-holder .seperator"
                     ],
                     "properties": ["background-color"]
                   }
@@ -17059,18 +17048,18 @@
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
                     "selectors": [
-                      ".chat-holder .profile-image-holder"
+                      ".chat-holder .seperator"
                     ],
-                    "properties": ["background-color"]
+                    "properties": ["color"]
                   }
                 ],
                 "breakpoints": {
                   "tablet": {
-                    "name": "chatchatContactSeparatorTextTablet",
+                    "name": "chatContactSeparatorTextTablet",
                     "default": "inherit-mobile"
                   },
                   "desktop": {
-                    "name": "chatchatContactSeparatorTextDesktop",
+                    "name": "chatContactSeparatorTextDesktop",
                     "default": "inherit-tablet"
                   }
                 },
