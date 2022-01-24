@@ -3,7 +3,11 @@
     chatConvListWidth: $chatConvListWidth,
     chatConvAreaWidth: $chatConvAreaWidth,
     chatBackgroundColor: $chatBackgroundColor,
+    chatHeadingsColor: $chatHeadingsColor,
     chatTextColor: $chatTextColor,
+    chatIconsAndLinksColor: $chatIconsAndLinksColor,
+    chatButtonBackground: $chatButtonBackground,
+    chatButtonTextColor: $chatButtonTextColor,
     chatOwnBubbleBackground: $chatOwnBubbleBackground,
     chatOwnBubbleTextColor: $chatOwnBubbleTextColor,
     chatOthersBubbleBackground: $chatOthersBubbleBackground,
@@ -11,7 +15,11 @@
     chatConvListWidthTablet: $chatConvListWidthTablet,
     chatConvAreaWidthTablet: $chatConvAreaWidthTablet,
     chatBackgroundColorTablet: $chatBackgroundColorTablet,
+    chatHeadingsColorTablet: $chatHeadingsColorTablet,
     chatTextColorTablet: $chatTextColorTablet,
+    chatIconsAndLinksColorTablet: $chatIconsAndLinksColorTablet,
+    chatButtonBackgroundTablet: $chatButtonBackgroundTablet,
+    chatButtonTextColorTablet: $chatButtonTextColorTablet,
     chatOwnBubbleBackgroundTablet: $chatOwnBubbleBackgroundTablet,
     chatOwnBubbleTextColorTablet: $chatOwnBubbleTextColorTablet,
     chatOthersBubbleBackgroundTablet: $chatOthersBubbleBackgroundTablet,
@@ -19,7 +27,11 @@
     chatConvListWidthDesktop: $chatConvListWidthDesktop,
     chatConvAreaWidthDesktop: $chatConvAreaWidthDesktop,
     chatBackgroundColorDesktop: $chatBackgroundColorDesktop,
+    chatHeadingsColorDesktop: $chatHeadingsColorDesktop,
     chatTextColorDesktop: $chatTextColorDesktop,
+    chatIconsAndLinksColorDesktop: $chatIconsAndLinksColorDesktop,
+    chatButtonBackgroundDesktop: $chatButtonBackgroundDesktop,
+    chatButtonTextColorDesktop: $chatButtonTextColorDesktop,
     chatOwnBubbleBackgroundDesktop: $chatOwnBubbleBackgroundDesktop,
     chatOwnBubbleTextColorDesktop: $chatOwnBubbleTextColorDesktop,
     chatOthersBubbleBackgroundDesktop: $chatOthersBubbleBackgroundDesktop,
@@ -67,16 +79,16 @@
         }
 
         .header-title {
-          color: map-get($configuration, chatTextColor);
+          color: map-get($configuration, chatHeadingsColor);
 
           // Styles for tablet
           @include above($tabletBreakpoint) {
-            color: map-get($configuration, chatTextColorTablet);
+            color: map-get($configuration, chatHeadingsColorTablet);
           }
 
           // Styles for desktop
           @include above($desktopBreakpoint) {
-            color: map-get($configuration, chatTextColorDesktop);
+            color: map-get($configuration, chatHeadingsColorDesktop);
           }
         }
       }
@@ -142,6 +154,20 @@
         // Styles for desktop
         @include above($desktopBreakpoint) {
           color: rgba(map-get($configuration, chatTextColorDesktop), 0.5);
+        }
+      }
+
+      .chat-user-name {
+        color: map-get($configuration, chatHeadingsColor);
+
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          color: map-get($configuration, chatHeadingsColorTablet);
+        }
+
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          color: map-get($configuration, chatHeadingsColorDesktop);
         }
       }
 
@@ -226,6 +252,49 @@
       @include above($desktopBreakpoint) {
         background-color: map-get($configuration, chatBackgroundColorDesktop);
       }
+
+      .fa {
+        color: map-get($configuration, chatIconsAndLinksColor);
+
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          color: map-get($configuration, chatIconsAndLinksColorTablet);
+        }
+
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          color: map-get($configuration, chatIconsAndLinksColorDesktop);
+        }
+      }
+
+      .contacts-info,
+      .group-info {
+        color: map-get($configuration, chatHeadingsColor);
+
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          color: map-get($configuration, chatHeadingsColorTablet);
+        }
+
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          color: map-get($configuration, chatHeadingsColorDesktop);
+        }
+      }
+
+      .contact-image-holder .contact-name-holder {
+        color: map-get($configuration, chatHeadingsColor);
+
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          color: map-get($configuration, chatHeadingsColorTablet);
+        }
+
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          color: map-get($configuration, chatHeadingsColorDesktop);
+        }
+      }
     }
 
     .chat-card-holder.unread:after {
@@ -234,21 +303,45 @@
 
     .chat-card {
       .profile-image-holder {
-        background-color: rgba(map-get($configuration, chatTextColor), 0.1);
+        background-color: rgba(map-get($configuration, chatIconsAndLinksColor), 0.1);
 
         // Styles for tablet
         @include above($tabletBreakpoint) {
-          background-color: rgba(map-get($configuration, chatTextColorTablet), 0.1);
+          background-color: rgba(map-get($configuration, chatIconsAndLinksColorTablet), 0.1);
         }
 
         // Styles for desktop
         @include above($desktopBreakpoint) {
-          background-color: rgba(map-get($configuration, chatTextColorDesktop), 0.1);
+          background-color: rgba(map-get($configuration, chatIconsAndLinksColorDesktop), 0.1);
+        }
+
+        .fa {
+          color: map-get($configuration, chatIconsAndLinksColor);
+
+          // Styles for tablet
+          @include above($tabletBreakpoint) {
+            color: map-get($configuration, chatIconsAndLinksColorTablet);
+          }
+  
+          // Styles for desktop
+          @include above($desktopBreakpoint) {
+            color: map-get($configuration, chatIconsAndLinksColorDesktop);
+          }
         }
       }
 
       &.contact-selected .profile-image-holder .fa {
-        color: rgba($highlightColor, 0.15);
+        color: map-get($configuration, chatIconsAndLinksColor);
+        
+        // Styles for tablet
+        @include above($tabletBreakpoint) {
+          color: map-get($configuration, chatIconsAndLinksColorTablet);
+        }
+
+        // Styles for desktop
+        @include above($desktopBreakpoint) {
+          color: map-get($configuration, chatIconsAndLinksColorDesktop);
+        }
       }
     }
 
@@ -354,7 +447,7 @@
         background-color: rgba(map-get($configuration, chatTextColor), 0.1);
 
         .fa {
-          color: rgba(map-get($configuration, chatTextColor), 0.15);
+          color: map-get($configuration, chatIconsAndLinksColor);
           background-color: transparent;
         }
 
@@ -363,7 +456,7 @@
           background-color: rgba(map-get($configuration, chatTextColorTablet), 0.1);
 
           .fa {
-            color: rgba(map-get($configuration, chatTextColorTablet), 0.15);
+            color: map-get($configuration, chatIconsAndLinksColorTablet);
           }
         }
 
@@ -372,7 +465,7 @@
           background-color: rgba(map-get($configuration, chatTextColorDesktop), 0.1);
 
           .fa {
-            color: rgba(map-get($configuration, chatTextColorDesktop), 0.15);
+            color: map-get($configuration, chatIconsAndLinksColorDesktop);
           }
         }
       }
@@ -395,46 +488,58 @@
 
     .chat-controls .start-new,
     .contacts-holder-overlay .contacts-back {
-      color: $highlightColor;
+      color: map-get($configuration, chatIconsAndLinksColor);
+
+      // Styles for tablet
+      @include above($tabletBreakpoint) {
+        color: map-get($configuration, chatIconsAndLinksColorTablet);
+      }
+
+      // Styles for desktop
+      @include above($desktopBreakpoint) {
+        color: map-get($configuration, chatIconsAndLinksColorDesktop);
+      }
     }
 
     .contacts-done-holder .contacts-done,
     .contacts-done-holder .contacts-create {
       background-color: transparent;
-      border: 1px solid rgba(map-get($configuration, chatTextColor), 0.6);
-      color: rgba(map-get($configuration, chatTextColor), 0.6);
+      border: 1px solid map-get($configuration, chatButtonBackground);
+      color: map-get($configuration, chatButtonTextColor);
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
-        border: 1px solid rgba(map-get($configuration, chatTextColorTablet), 0.6);
-        color: rgba(map-get($configuration, chatTextColorTablet), 0.6);
+        border: 1px solid map-get($configuration, chatButtonBackgroundTablet);
+        border: 1px solid map-get($configuration, chatButtonBackgroundTablet);
+        color: map-get($configuration, chatButtonTextColorTablet);
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
-        border: 1px solid rgba(map-get($configuration, chatTextColorDesktop), 0.6);
-        color: rgba(map-get($configuration, chatTextColorDesktop), 0.6);
+        border: 1px solid map-get($configuration, chatButtonBackgroundDesktop);
+        border: 1px solid map-get($configuration, chatButtonBackgroundDesktop);
+        color: map-get($configuration, chatButtonTextColorDesktop);
       }
     }
 
     .contacts-top-header.ready .contacts-done-holder .contacts-done,
     .group-top-header.ready .contacts-done-holder .contacts-create {
-      background-color: map-get($configuration, chatOwnBubbleBackground);
-      border: 1px solid map-get($configuration, chatOwnBubbleBackground);
-      color: map-get($configuration, chatOwnBubbleTextColor);
+      background-color: map-get($configuration, chatButtonBackground);
+      border: 1px solid map-get($configuration, chatButtonBackground);
+      color: map-get($configuration, chatButtonTextColor);
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
-        background-color: map-get($configuration, chatOwnBubbleBackgroundTablet);
-        border: 1px solid map-get($configuration, chatOwnBubbleBackgroundTablet);
-        color: map-get($configuration, chatOwnBubbleTextColorTablet);
+        background-color: map-get($configuration, chatButtonBackgroundTablet);
+        border: 1px solid map-get($configuration, chatButtonBackgroundTablet);
+        color: map-get($configuration, chatButtonTextColorTablet);
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
-        background-color: map-get($configuration, chatOwnBubbleBackgroundDesktop);
-        border: 1px solid map-get($configuration, chatOwnBubbleBackgroundDesktop);
-        color: map-get($configuration, chatOwnBubbleTextColorDesktop);
+        background-color: map-get($configuration, chatButtonBackgroundDesktop);
+        border: 1px solid map-get($configuration, chatButtonBackgroundDesktop);
+        color: map-get($configuration, chatButtonTextColorDesktop);
       }
     }
 
@@ -757,16 +862,16 @@
 
     .section-label-wrapper {
       .search-holder .fa {
-        color: map-get($configuration, chatOwnBubbleBackground);
+        color: map-get($configuration, chatIconsAndLinksColor);
 
         // Styles for tablet
         @include above($tabletBreakpoint) {
-          color: map-get($configuration, chatOwnBubbleBackgroundTablet);
+          color: map-get($configuration, chatIconsAndLinksColorTablet);
         }
 
         // Styles for desktop
         @include above($desktopBreakpoint) {
-          color: map-get($configuration, chatOwnBubbleBackgroundDesktop);
+          color: map-get($configuration, chatIconsAndLinksColorDesktop);
         }
       }
 

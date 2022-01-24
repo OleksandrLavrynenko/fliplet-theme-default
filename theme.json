@@ -16780,6 +16780,33 @@
                 "type": "color"
               },
               {
+                "name": "chatHeadingsColor",
+                "default": "$headingOneColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .header-title",
+                      ".chat-holder .chat-user-name"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatHeadingsColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatHeadingsColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Headings",
+                "type": "color"
+              },
+              {
                 "name": "chatTextColor",
                 "default": "$bodyTextColor",
                 "columns": 12,
@@ -16788,8 +16815,8 @@
                     "parentSelector": "[data-widget-package='com.fliplet.chat']",
                     "selectors": [
                       ".chat-holder",
-                      ".chat-holder .top-header",
-                      ".chat-holder .top-header .header-title",
+                      ".chat-holder .chat-user-preview-holder .chat-user-preview",
+                      ".chat-holder .chat-users-group span",
                       ".group-name-field-holder .group-name-field",
                       ".chat.editing.chat-left .chat-body",
                       ".chat.editing.chat-right .chat-body",
@@ -16810,6 +16837,244 @@
                   }
                 },
                 "label": "Text",
+                "type": "color"
+              },
+              {
+                "name": "chatIconsAndLinksColor",
+                "default": "$highlightColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .profile-image-holder .fa",
+                      ".chat-holder .top-header .chat-controls .start-new",
+                      ".chat-holder .contacts-holder-overlay .contacts-back",
+                      ".chat-holder .contacts-holder-overlay .search-holder .fa",
+                      ".chat-holder .show-selected-users .contact-image-holder .contact-image-wrapper .fa"
+                    ],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatIconsAndLinksColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatIconsAndLinksColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Icons and links color",
+                "type": "color"
+              },
+              {
+                "name": "chatButtonBackground",
+                "default": "$primaryButtonColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .contacts-top-header .btn"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatButtonBackgroundTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatButtonBackgroundDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Button background",
+                "type": "color"
+              },
+              {
+                "name": "chatButtonTextColor",
+                "default": "$primaryButtonTextColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .profile-image-holder"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatButtonTextColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatButtonTextColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Button text",
+                "type": "color"
+              },
+              {
+                "name": "chatContactCardBackground",
+                "default": "$bodyBackground",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .profile-image-holder"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatContactCardBackgroundTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatContactCardBackgroundDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Contact card background",
+                "type": "color"
+              },
+              {
+                "name": "chatContactCardText",
+                "default": "$bodyTextColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .profile-image-holder"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatContactCardTextTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatContactCardTextDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Contact card text",
+                "type": "color"
+              },
+              {
+                "name": "chatContactCardBackgroundSelected",
+                "default": "$primaryButtonColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .profile-image-holder"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatContactCardBackgroundSelectedTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatContactCardBackgroundSelectedDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Contact card background (selected)",
+                "type": "color"
+              },
+              {
+                "name": "chatContactCardTextSelected",
+                "default": "$primaryButtonTextColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .profile-image-holder"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatContactCardTextSelectedTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatContactCardTextSelectedDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Contact card text (selected)",
+                "type": "color"
+              },
+              {
+                "name": "chatContactSeparatorBackground",
+                "default": "#E9E9E9",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .profile-image-holder"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatContactSeparatorBackgroundTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatContactSeparatorBackgroundDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Contact separator background",
+                "type": "color"
+              },
+              {
+                "name": "chatContactSeparatorText",
+                "default": "$bodyTextColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.chat']",
+                    "selectors": [
+                      ".chat-holder .profile-image-holder"
+                    ],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "chatchatContactSeparatorTextTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "chatchatContactSeparatorTextDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Contact separator text",
                 "type": "color"
               }
             ]
