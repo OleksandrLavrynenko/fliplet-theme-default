@@ -16,8 +16,8 @@
     chatContactCardText: $chatContactCardText,
     chatContactCardBackgroundSelected: $chatContactCardBackgroundSelected,
     chatContactCardTextSelected: $chatContactCardTextSelected,
-    chatContactSeparatorBackground: $chatContactSeparatorBackground,
-    chatContactSeparatorText: $chatContactSeparatorText,
+    chatSeparatorBackground: $chatSeparatorBackground,
+    chatSeparatorTextColor: $chatSeparatorTextColor,
     chatConvListWidthTablet: $chatConvListWidthTablet,
     chatConvAreaWidthTablet: $chatConvAreaWidthTablet,
     chatBackgroundColorTablet: $chatBackgroundColorTablet,
@@ -34,8 +34,8 @@
     chatContactCardTextTablet: $chatContactCardTextTablet,
     chatContactCardBackgroundSelectedTablet: $chatContactCardBackgroundSelectedTablet,
     chatContactCardTextSelectedTablet: $chatContactCardTextSelectedTablet,
-    chatContactSeparatorBackgroundTablet: $chatContactSeparatorBackgroundTablet,
-    chatContactSeparatorTextTablet: $chatContactSeparatorTextTablet,
+    chatSeparatorBackgroundTablet: $chatSeparatorBackgroundTablet,
+    chatSeparatorTextColorTablet: $chatSeparatorTextColorTablet,
     chatConvListWidthDesktop: $chatConvListWidthDesktop,
     chatConvAreaWidthDesktop: $chatConvAreaWidthDesktop,
     chatBackgroundColorDesktop: $chatBackgroundColorDesktop,
@@ -52,8 +52,8 @@
     chatContactCardTextDesktop: $chatContactCardTextDesktop,
     chatContactCardBackgroundSelectedDesktop: $chatContactCardBackgroundSelectedDesktop,
     chatContactCardTextSelectedDesktop: $chatContactCardTextSelectedDesktop,
-    chatContactSeparatorBackgroundDesktop: $chatContactSeparatorBackgroundDesktop,
-    chatContactSeparatorTextDesktop: $chatContactSeparatorTextDesktop
+    chatSeparatorBackgroundDesktop: $chatSeparatorBackgroundDesktop,
+    chatSeparatorTextColorDesktop: $chatSeparatorTextColorDesktop
   ), $options);
 
   $instanceSelector: '[data-widget-package="com.fliplet.chat"]';
@@ -615,35 +615,38 @@
       .fa-times {
         background-color: map-get($configuration, chatButtonBackground);
         color: map-get($configuration, chatButtonTextColor);
+        border: 2px solid map-get($configuration, chatBackgroundColor);
 
         // Styles for tablet
         @include above($tabletBreakpoint) {
           background-color: map-get($configuration, chatButtonBackgroundTablet);
           color: map-get($configuration, chatButtonTextColorTablet);
+          border: 2px solid map-get($configuration, chatBackgroundColorTablet);
         }
 
         // Styles for desktop
         @include above($desktopBreakpoint) {
           background-color: map-get($configuration, chatButtonBackgroundDesktop);
           color: map-get($configuration, chatButtonTextColorDesktop);
+          border: 2px solid map-get($configuration, chatBackgroundColorDesktop);
         }
       }
     }
 
     .all-users-holder .seperator {
-      background-color: map-get($configuration, chatContactSeparatorBackground);
-      color: map-get($configuration, chatContactSeparatorText);
+      background-color: map-get($configuration, chatSeparatorBackground);
+      color: map-get($configuration, chatSeparatorTextColor);
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
-        background-color: map-get($configuration, chatContactSeparatorBackgroundTablet);
-        color: map-get($configuration, chatContactSeparatorTextTablet);
+        background-color: map-get($configuration, chatSeparatorBackgroundTablet);
+        color: map-get($configuration, chatSeparatorTextColorTablet);
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
-        background-color: map-get($configuration, chatContactSeparatorBackgroundDesktop);
-        color: map-get($configuration, chatContactSeparatorTextDesktop);
+        background-color: map-get($configuration, chatSeparatorBackgroundDesktop);
+        color: map-get($configuration, chatSeparatorTextColorDesktop);
       }
     }
 
@@ -1001,19 +1004,19 @@
     }
 
     .all-users-holder .seperator {
-      background-color: map-get($configuration, chatContactSeparatorBackground);
-      color: map-get($configuration, chatContactSeparatorText);
+      background-color: map-get($configuration, chatSeparatorBackground);
+      color: map-get($configuration, chatSeparatorTextColor);
 
       // Styles for tablet
       @include above($tabletBreakpoint) {
-        background-color: map-get($configuration, chatContactSeparatorBackgroundTablet);
-        color: map-get($configuration, chatContactSeparatorTextTablet);
+        background-color: map-get($configuration, chatSeparatorBackgroundTablet);
+        color: map-get($configuration, chatSeparatorTextColorTablet);
       }
 
       // Styles for desktop
       @include above($desktopBreakpoint) {
-        background-color: map-get($configuration, chatContactSeparatorBackgroundDesktop);
-        color: map-get($configuration, chatContactSeparatorTextDesktop);
+        background-color: map-get($configuration, chatSeparatorBackgroundDesktop);
+        color: map-get($configuration, chatSeparatorTextColorDesktop);
       }
     }
 

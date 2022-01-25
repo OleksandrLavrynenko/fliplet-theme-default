@@ -17015,7 +17015,7 @@
                 "type": "color"
               },
               {
-                "name": "chatContactSeparatorBackground",
+                "name": "chatSeparatorBackground",
                 "default": "#E9E9E9",
                 "columns": 12,
                 "styles": [
@@ -17029,11 +17029,11 @@
                 ],
                 "breakpoints": {
                   "tablet": {
-                    "name": "chatContactSeparatorBackgroundTablet",
+                    "name": "chatSeparatorBackgroundTablet",
                     "default": "inherit-mobile"
                   },
                   "desktop": {
-                    "name": "chatContactSeparatorBackgroundDesktop",
+                    "name": "chatSeparatorBackgroundDesktop",
                     "default": "inherit-tablet"
                   }
                 },
@@ -17041,7 +17041,7 @@
                 "type": "color"
               },
               {
-                "name": "chatContactSeparatorText",
+                "name": "chatSeparatorTextColor",
                 "default": "$bodyTextColor",
                 "columns": 12,
                 "styles": [
@@ -17055,11 +17055,11 @@
                 ],
                 "breakpoints": {
                   "tablet": {
-                    "name": "chatContactSeparatorTextTablet",
+                    "name": "chatSeparatorTextColorTablet",
                     "default": "inherit-mobile"
                   },
                   "desktop": {
-                    "name": "chatContactSeparatorTextDesktop",
+                    "name": "chatSeparatorTextColorDesktop",
                     "default": "inherit-tablet"
                   }
                 },
