@@ -364,20 +364,20 @@
       }
 
       .fa-times {
-        background-color: transparent;
+        background-color: map-get($configuration, chatButtonBackground);
         border: 1px solid map-get($configuration, chatButtonBackground);
         color: map-get($configuration, chatButtonTextColor);
 
         // Styles for tablet
         @include above($tabletBreakpoint) {
-          border: 1px solid map-get($configuration, chatButtonBackgroundTablet);
+          background-color: map-get($configuration, chatButtonBackgroundTablet);
           border: 1px solid map-get($configuration, chatButtonBackgroundTablet);
           color: map-get($configuration, chatButtonTextColorTablet);
         }
 
         // Styles for desktop
         @include above($desktopBreakpoint) {
-          border: 1px solid map-get($configuration, chatButtonBackgroundDesktop);
+          background-color: map-get($configuration, chatButtonBackgroundDesktop);
           border: 1px solid map-get($configuration, chatButtonBackgroundDesktop);
           color: map-get($configuration, chatButtonTextColorDesktop);
         }
