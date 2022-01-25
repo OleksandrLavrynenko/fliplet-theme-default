@@ -887,21 +887,37 @@
       }
 
       .input-second-row {
+        .image-button {
+          .fa {
+            color: map-get($configuration, chatIconsAndLinksColor);
+
+            // Styles for tablet
+            @include above($tabletBreakpoint) {
+              color: map-get($configuration, chatIconsAndLinksColorTablet);
+            }
+
+            // Styles for desktop
+            @include above($desktopBreakpoint) {
+              color: map-get($configuration, chatIconsAndLinksColorDesktop);
+            }
+          }
+        }
+
         .send-button,
         .send-save-button {
-          color: rgba(map-get($configuration, chatTextColor), 0.3);
-          border: 1px solid rgba(map-get($configuration, chatTextColor), 0.3);
+          color: map-get($configuration, chatButtonBackground);
+          border: 1px solid map-get($configuration, chatButtonBackground);
 
           // Styles for tablet
           @include above($tabletBreakpoint) {
-            color: rgba(map-get($configuration, chatTextColorTablet), 0.3);
-            border: 1px solid rgba(map-get($configuration, chatTextColorTablet), 0.3);
+            color: map-get($configuration, chatButtonBackgroundTablet);
+            border: 1px solid map-get($configuration, chatButtonBackgroundTablet);
           }
 
           // Styles for desktop
           @include above($desktopBreakpoint) {
-            color: rgba(map-get($configuration, chatTextColorDesktop), 0.3);
-            border: 1px solid rgba(map-get($configuration, chatTextColorDesktop), 0.3);
+            color: map-get($configuration, chatButtonBackgroundDesktop);
+            border: 1px solid map-get($configuration, chatButtonBackgroundDesktop);
           }
         }
       }
@@ -910,22 +926,22 @@
         .input-second-row {
           .send-button,
           .send-save-button {
-            background-color: map-get($configuration, chatOwnBubbleBackground);
-            color: map-get($configuration, chatOwnBubbleTextColor);
-            border: 1px solid map-get($configuration, chatOwnBubbleBackground);
+            background-color: map-get($configuration, chatButtonBackground);
+            color: map-get($configuration, chatBackgroundColor);
+            border: 1px solid map-get($configuration, chatButtonBackground);
 
             // Styles for tablet
             @include above($tabletBreakpoint) {
               background-color: map-get($configuration, chatOwnBubbleBackgroundTablet);
-              color: map-get($configuration, chatOwnBubbleTextColorTablet);
-              border: 1px solid map-get($configuration, chatOwnBubbleBackgroundTablet);
+              color: map-get($configuration, chatBackgroundColorTablet);
+              border: 1px solid map-get($configuration, chatButtonBackgroundTablet);
             }
 
             // Styles for desktop
             @include above($desktopBreakpoint) {
-              background-color: map-get($configuration, chatOwnBubbleBackgroundDesktop);
-              color: map-get($configuration, chatOwnBubbleTextColorDesktop);
-              border: 1px solid map-get($configuration, chatOwnBubbleBackgroundDesktop);
+              background-color: map-get($configuration, chatButtonBackgroundDesktop);
+              color: map-get($configuration, chatBackgroundColorDesktop);
+              border: 1px solid map-get($configuration, chatButtonBackgroundDesktop);
             }
           }
         }
