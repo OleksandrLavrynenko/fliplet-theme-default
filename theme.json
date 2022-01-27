@@ -16774,7 +16774,7 @@
               },
               {
                 "name": "chatHeadingsColor",
-                "default": "$quickTextColor",
+                "default": "$textHeadingOneColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -16802,7 +16802,7 @@
               },
               {
                 "name": "chatTextColor",
-                "default": "$bodyTextColor",
+                "default": "$quickTextColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -17123,7 +17123,7 @@
               },
               {
                 "name": "chatOwnBubbleTextColor",
-                "default": "#ffffff",
+                "default": "$primaryButtonTextColor",
                 "columns": 12,
                 "styles": [
                   {
