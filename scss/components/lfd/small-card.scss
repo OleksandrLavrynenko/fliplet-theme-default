@@ -264,6 +264,12 @@
     smallCardSearchFieldBorderActiveColor: $smallCardSearchFieldBorderActiveColor,
     smallCardSearchFieldBorderActiveColorTablet: $smallCardSearchFieldBorderActiveColorTablet,
     smallCardSearchFieldBorderActiveColorDesktop: $smallCardSearchFieldBorderActiveColorDesktop,
+    smallCardSearchFieldTextColor: $smallCardSearchFieldTextColor,
+    smallCardSearchFieldTextColorTablet: $smallCardSearchFieldTextColorTablet,
+    smallCardSearchFieldTextColorDesktop: $smallCardSearchFieldTextColorDesktop,
+    smallCardSearchFieldBackgroundColor: $smallCardSearchFieldBackgroundColor,
+    smallCardSearchFieldBackgroundColorTablet: $smallCardSearchFieldBackgroundColorTablet,
+    smallCardSearchFieldBackgroundColorDesktop: $smallCardSearchFieldBackgroundColorDesktop,
     smallCardBookmarkIconColor: $smallCardBookmarkIconColor,
     smallCardBookmarkIconColorTablet: $smallCardBookmarkIconColorTablet,
     smallCardBookmarkIconColorDesktop: $smallCardBookmarkIconColorDesktop,
@@ -1240,6 +1246,11 @@
             }
           }
 
+          .search-feed {
+            background-color: rgba(map-get($configuration, smallCardSearchFieldBackgroundColor), 1);
+            color: map-get($configuration, smallCardSearchFieldTextColor);
+          }
+
           .fa {
             color: map-get($configuration, smallCardSearchIconColor);
           }
@@ -1348,60 +1359,63 @@
           }
         }
 
-        .search-holder {
-          input[type="search"] {
-            border-color: map-get($configuration, smallCardSearchFieldBorderColorTablet);
+        .section-top-wrapper {
+          .search-holder {
+            input[type="search"] {
+              border-color: map-get($configuration, smallCardSearchFieldBorderColorTablet);
 
-            &:focus {
-              border-color: map-get($configuration, smallCardSearchFieldBorderActiveColorTablet);
+              &:focus {
+                border-color: map-get($configuration, smallCardSearchFieldBorderActiveColorTablet);
+              }
             }
-          }
 
-          .fa {
-            color: map-get($configuration, smallCardSearchIconColorTablet);
-          }
+            .search-feed {
+              background-color: rgba(map-get($configuration, smallCardSearchFieldBackgroundColorTablet), 1);
+              color: map-get($configuration, smallCardSearchFieldTextColorTablet);
+            }
 
-          .form-control {
-            background-color: $bodyBackgroundTablet;
-            color: $bodyTextColorTablet;
-          }
-          .btn.search-btn {
-            border: none;
-            background-color: rgba($bodyTextColorTablet, 0.1);
-            color: $bodyTextColorTablet;
+            .fa {
+              color: map-get($configuration, smallCardSearchIconColorTablet);
+            }
 
-            &:hover,
-            &:active,
-            &:active:hover {
+            .btn.search-btn {
+              border: none;
+              background-color: rgba($bodyTextColorTablet, 0.1);
+              color: $bodyTextColorTablet;
+
+              &:hover,
+              &:active,
+              &:active:hover {
+                border: none;
+              }
+            }
+
+            .search-feed:focus ~ .btn.search-btn {
               border: none;
             }
-          }
 
-          .search-feed:focus ~ .btn.search-btn {
-            border: none;
-          }
-
-          .list-search-icon {
-            .fa-sliders, .fa-times {
-              color: map-get($configuration, smallCardFilterIconColorTablet) !important;
-            }
-
-            &.active .fa-sliders, .fa-times {
-              color: map-get($configuration, smallCardFilterIconActiveColorTablet) !important;
-            }
-
-            .toggle-bookmarks {
-              &.mixitup-control-active .fa {
-                color: map-get($configuration, smallCardBookmarkIconActiveColorTablet) !important;
+            .list-search-icon {
+              .fa-sliders, .fa-times {
+                color: map-get($configuration, smallCardFilterIconColorTablet) !important;
               }
 
-              .fa {
-                color: map-get($configuration, smallCardBookmarkIconColorTablet) !important;
+              &.active .fa-sliders, .fa-times {
+                color: map-get($configuration, smallCardFilterIconActiveColorTablet) !important;
               }
-            }
 
-            .sort-group .fa-sort-amount-desc {
-              color: map-get($configuration, smallCardSortIconColorTablet) !important;
+              .toggle-bookmarks {
+                &.mixitup-control-active .fa {
+                  color: map-get($configuration, smallCardBookmarkIconActiveColorTablet) !important;
+                }
+
+                .fa {
+                  color: map-get($configuration, smallCardBookmarkIconColorTablet) !important;
+                }
+              }
+
+              .sort-group .fa-sort-amount-desc {
+                color: map-get($configuration, smallCardSortIconColorTablet) !important;
+              }
             }
           }
         }
@@ -1476,61 +1490,64 @@
             border-bottom: 1px solid rgba(map-get($configuration, lfdOverlayFontColorDesktop), 0.2);
           }
         }
+        
+        .section-top-wrapper {
+          .search-holder {
+            input[type="search"] {
+              border-color: map-get($configuration, smallCardSearchFieldBorderColorDesktop);
 
-        .search-holder {
-          input[type="search"] {
-            border-color: map-get($configuration, smallCardSearchFieldBorderColorDesktop);
-
-            &:focus {
-              border-color: map-get($configuration, smallCardSearchFieldBorderActiveColorDesktop);
+              &:focus {
+                border-color: map-get($configuration, smallCardSearchFieldBorderActiveColorDesktop);
+              }
             }
-          }
 
-          .fa {
-            color: map-get($configuration, smallCardSearchIconColorDesktop);
-          }
+            .search-feed {
+              background-color: rgba(map-get($configuration, smallCardSearchFieldBackgroundColorDesktop), 1);
+              color: map-get($configuration, smallCardSearchFieldTextColorDesktop);
+            }
 
-          .form-control {
-            background-color: $bodyBackgroundDesktop;
-            color: $bodyTextColorDesktop;
-          }
-          .btn.search-btn {
-            border: none;
-            background-color: rgba($bodyTextColorDesktop, 0.1);
-            color: $bodyTextColorDesktop;
+            .fa {
+              color: map-get($configuration, smallCardSearchIconColorDesktop);
+            }
+            
+            .btn.search-btn {
+              border: none;
+              background-color: rgba($bodyTextColorDesktop, 0.1);
+              color: $bodyTextColorDesktop;
 
-            &:hover,
-            &:active,
-            &:active:hover {
+              &:hover,
+              &:active,
+              &:active:hover {
+                border: none;
+              }
+            }
+
+            .search-feed:focus ~ .btn.search-btn {
               border: none;
             }
-          }
 
-          .search-feed:focus ~ .btn.search-btn {
-            border: none;
-          }
-
-          .list-search-icon {
-            .fa-sliders, .fa-times {
-              color: map-get($configuration, smallCardFilterIconColorDesktop) !important;
-            }
-
-            &.active .fa-sliders, .fa-times {
-              color: map-get($configuration, smallCardFilterIconActiveColorDesktop) !important;
-            }
-
-            .toggle-bookmarks {
-              &.mixitup-control-active .fa {
-                color: map-get($configuration, smallCardBookmarkIconActiveColorDesktop) !important;
+            .list-search-icon {
+              .fa-sliders, .fa-times {
+                color: map-get($configuration, smallCardFilterIconColorDesktop) !important;
               }
 
-              .fa {
-                color: map-get($configuration, smallCardBookmarkIconColorDesktop) !important;
+              &.active .fa-sliders, .fa-times {
+                color: map-get($configuration, smallCardFilterIconActiveColorDesktop) !important;
               }
-            }
 
-            .sort-group .fa-sort-amount-desc {
-              color: map-get($configuration, smallCardSortIconColorDesktop) !important;
+              .toggle-bookmarks {
+                &.mixitup-control-active .fa {
+                  color: map-get($configuration, smallCardBookmarkIconActiveColorDesktop) !important;
+                }
+
+                .fa {
+                  color: map-get($configuration, smallCardBookmarkIconColorDesktop) !important;
+                }
+              }
+
+              .sort-group .fa-sort-amount-desc {
+                color: map-get($configuration, smallCardSortIconColorDesktop) !important;
+              }
             }
           }
         }
