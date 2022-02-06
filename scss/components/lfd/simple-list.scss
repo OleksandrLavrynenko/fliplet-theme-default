@@ -195,6 +195,12 @@
     simpleListSearchFieldBorderActiveColor: $simpleListSearchFieldBorderActiveColor,
     simpleListSearchFieldBorderActiveColorTablet: $simpleListSearchFieldBorderActiveColorTablet,
     simpleListSearchFieldBorderActiveColorDesktop: $simpleListSearchFieldBorderActiveColorDesktop,
+    simpleListSearchFieldTextColor: $simpleListSearchFieldTextColor,
+    simpleListSearchFieldTextColorTablet: $simpleListSearchFieldTextColorTablet,
+    simpleListSearchFieldTextColorDesktop: $simpleListSearchFieldTextColorDesktop,
+    simpleListSearchFieldBackgroundColor: $simpleListSearchFieldBackgroundColor,
+    simpleListSearchFieldBackgroundColorTablet: $simpleListSearchFieldBackgroundColorTablet,
+    simpleListSearchFieldBackgroundColorDesktop: $simpleListSearchFieldBackgroundColorDesktop,
     simpleListBookmarkIconColor: $simpleListBookmarkIconColor,
     simpleListBookmarkIconColorTablet: $simpleListBookmarkIconColorTablet,
     simpleListBookmarkIconColorDesktop: $simpleListBookmarkIconColorDesktop,
@@ -694,6 +700,11 @@
             }
           }
 
+          .search-feed {
+            background-color: rgba(map-get($configuration, simpleListSearchFieldBackgroundColor), 1);
+            color: map-get($configuration, simpleListSearchFieldTextColor);
+          }
+
           .fa {
             color: map-get($configuration, simpleListSearchIconColor);
           }
@@ -732,6 +743,11 @@
               &:focus {
                 border-color: map-get($configuration, simpleListSearchFieldBorderActiveColorTablet);
               }
+            }
+
+            .search-feed {
+              background-color: rgba(map-get($configuration, simpleListSearchFieldBackgroundColorTablet), 1);
+              color: map-get($configuration, simpleListSearchFieldTextColorTablet);
             }
 
             .fa {
@@ -773,6 +789,11 @@
               &:focus {
                 border-color: map-get($configuration, simpleListSearchFieldBorderActiveColorDesktop);
               }
+            }
+
+            .search-feed {
+              background-color: rgba(map-get($configuration, simpleListSearchFieldBackgroundColorDesktop), 1);
+              color: map-get($configuration, simpleListSearchFieldTextColorDesktop);
             }
 
             .fa {
