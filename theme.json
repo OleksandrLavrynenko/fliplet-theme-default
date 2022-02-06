@@ -1,6 +1,6 @@
 {
-  "name": "Fliplet theme",
-  "package": "com.fliplet.theme.default",
+  "name": "Fliplet theme Lav",
+  "package": "com.fliplet.theme.default-lav",
   "version": "2.0.0",
   "icon": "img/icon.png",
   "tags": ["engineVersion:2"],
@@ -34097,6 +34097,54 @@
                   }
                 },
                 "label": "Search field border color active",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedSearchFieldTextColor",
+                "default": "$bodyTextColor",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'][data-settings-layout='news-feed']",
+                    "selectors": [".new-news-feed-list-container .section-top-wrapper .search-holder .search-feed"],
+                    "properties": ["color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedSearchFieldTextColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedSearchFieldTextColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field text color",
+                "type": "color"
+              },
+              {
+                "name": "newsFeedSearchFieldBackgroundColor",
+                "default": "$bodyBackground",
+                "columns": 12,
+                "styles": [
+                  {
+                    "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'][data-settings-layout='news-feed']",
+                    "selectors": [".new-news-feed-list-container .section-top-wrapper .search-holder .search-feed"],
+                    "properties": ["background-color"]
+                  }
+                ],
+                "breakpoints": {
+                  "tablet": {
+                    "name": "newsFeedSearchFieldBackgroundColorTablet",
+                    "default": "inherit-mobile"
+                  },
+                  "desktop": {
+                    "name": "newsFeedSearchFieldBackgroundColorDesktop",
+                    "default": "inherit-tablet"
+                  }
+                },
+                "label": "Search field background color",
                 "type": "color"
               },
               {

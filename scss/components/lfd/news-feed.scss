@@ -222,6 +222,12 @@
   newsFeedSearchFieldBorderActiveColor: $newsFeedSearchFieldBorderActiveColor,
   newsFeedSearchFieldBorderActiveColorTablet: $newsFeedSearchFieldBorderActiveColorTablet,
   newsFeedSearchFieldBorderActiveColorDesktop: $newsFeedSearchFieldBorderActiveColorDesktop,
+  newsFeedSearchFieldTextColor: $newsFeedSearchFieldTextColor,
+  newsFeedSearchFieldTextColorTablet: $newsFeedSearchFieldTextColorTablet,
+  newsFeedSearchFieldTextColorDesktop: $newsFeedSearchFieldTextColorDesktop,
+  newsFeedSearchFieldBackgroundColor: $newsFeedSearchFieldBackgroundColor,
+  newsFeedSearchFieldBackgroundColorTablet: $newsFeedSearchFieldBackgroundColorTablet,
+  newsFeedSearchFieldBackgroundColorDesktop: $newsFeedSearchFieldBackgroundColorDesktop,
   newsFeedBookmarkIconColor: $newsFeedBookmarkIconColor,
   newsFeedBookmarkIconColorTablet: $newsFeedBookmarkIconColorTablet,
   newsFeedBookmarkIconColorDesktop: $newsFeedBookmarkIconColorDesktop,
@@ -1475,6 +1481,21 @@
           }
         }
 
+        .search-feed {
+          background-color: rgba(map-get($configuration, newsFeedSearchFieldBackgroundColor), 1);
+          color: map-get($configuration, newsFeedSearchFieldTextColor);
+
+          @include above($tabletBreakpoint) {
+            background-color: rgba(map-get($configuration, newsFeedSearchFieldBackgroundColorTablet), 1);
+            color: map-get($configuration, newsFeedSearchFieldTextColorTablet);
+          }
+
+          @include above($desktopBreakpoint) {
+            background-color: rgba(map-get($configuration, newsFeedSearchFieldBackgroundColorDesktop), 1);
+            color: map-get($configuration, newsFeedSearchFieldTextColorDesktop);
+          }
+        }
+
         .btn.search-btn {
           border: none;
           background-color: rgba($bodyTextColor, 0.1);
@@ -1596,11 +1617,6 @@
             color: map-get($configuration, newsFeedSearchIconColorTablet);
           }
 
-          .form-control {
-            background-color: $bodyBackgroundTablet;
-            color: $bodyTextColorTablet;
-          }
-
           .btn.search-btn {
             border: none;
             background-color: rgba($bodyTextColorTablet, 0.1);
@@ -1717,11 +1733,6 @@
 
           .fa {
             color: map-get($configuration, newsFeedSearchIconColorDesktop);
-          }
-
-          .form-control {
-            background-color: $bodyBackgroundDesktop;
-            color: $bodyTextColorDesktop;
           }
 
           .btn.search-btn {
