@@ -240,6 +240,12 @@
   agendaSearchFieldBorderActiveColor: $agendaSearchFieldBorderActiveColor,
   agendaSearchFieldBorderActiveColorTablet: $agendaSearchFieldBorderActiveColorTablet,
   agendaSearchFieldBorderActiveColorDesktop: $agendaSearchFieldBorderActiveColorDesktop,
+  agendaSearchFieldTextColor: $agendaSearchFieldTextColor,
+  agendaSearchFieldTextColorTablet: $agendaSearchFieldTextColorTablet,
+  agendaSearchFieldTextColorDesktop: $agendaSearchFieldTextColorDesktop,
+  agendaSearchFieldBackgroundColor: $agendaSearchFieldBackgroundColor,
+  agendaSearchFieldBackgroundColorTablet: $agendaSearchFieldBackgroundColorTablet,
+  agendaSearchFieldBackgroundColorDesktop: $agendaSearchFieldBackgroundColorDesktop,
   agendaBookmarkIconColor: $agendaBookmarkIconColor,
   agendaBookmarkIconColorTablet: $agendaBookmarkIconColorTablet,
   agendaBookmarkIconColorDesktop: $agendaBookmarkIconColorDesktop,
@@ -892,6 +898,11 @@
             }
           }
 
+          .search-feed {
+            background-color: rgba(map-get($configuration, agendaSearchFieldBackgroundColor), 1);
+            color: map-get($configuration, agendaSearchFieldTextColor);
+          }
+
           .fa {
             color: map-get($configuration, agendaSearchIconColor);
           }
@@ -1133,6 +1144,13 @@
               }
             }
 
+            
+  
+            .search-feed {
+              background-color: rgba(map-get($configuration, agendaSearchFieldBackgroundColorTablet), 1);
+              color: map-get($configuration, agendaSearchFieldTextColorTablet);
+            }
+
             .fa {
               color: map-get($configuration, agendaSearchIconColorTablet);
             }
@@ -1371,6 +1389,11 @@
               &:focus {
                 border-color: map-get($configuration, agendaSearchFieldBorderActiveColorDesktop);
               }
+            }
+
+            .search-feed {
+              background-color: rgba(map-get($configuration, agendaSearchFieldBackgroundColorDesktop), 1);
+              color: map-get($configuration, agendaSearchFieldTextColorDesktop);
             }
 
             .fa {
