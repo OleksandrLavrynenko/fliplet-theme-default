@@ -1470,6 +1470,19 @@
           .search-feed {
             background-color: rgba(map-get($configuration, newsFeedSearchFieldBackgroundColor), 1);
             color: map-get($configuration, newsFeedSearchFieldTextColor);
+
+            &::placeholder {
+              color: rgba(map-get($configuration, newsFeedSearchFieldTextColor), 0.8);
+              opacity: 1;
+            }
+            
+            &:-ms-input-placeholder {
+              color: rgba(map-get($configuration, newsFeedSearchFieldTextColor), 0.8);
+            }
+            
+            &::-ms-input-placeholder {
+              color: rgba(map-get($configuration, newsFeedSearchFieldTextColor), 0.8);
+            }
           }
 
           .fa {
@@ -1490,8 +1503,8 @@
 
         .btn.search-btn {
           border: none;
-          background-color: rgba($bodyTextColor, 0.1);
-          color: $bodyTextColor;
+          color: map-get($configuration, newsFeedSearchFieldTextColor);
+          background-color: rgba(map-get($configuration, newsFeedSearchFieldTextColor), 0.1);
 
           &:hover,
           &:active,
@@ -1609,6 +1622,19 @@
             .search-feed {
               background-color: rgba(map-get($configuration, newsFeedSearchFieldBackgroundColorTablet), 1);
               color: map-get($configuration, newsFeedSearchFieldTextColorTablet);
+
+              &::placeholder {
+                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorTablet), 0.8);
+                opacity: 1;
+              }
+              
+              &:-ms-input-placeholder {
+                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorTablet), 0.8);
+              }
+              
+              &::-ms-input-placeholder {
+                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorTablet), 0.8);
+              }
             }
 
             .fa {
@@ -1617,8 +1643,8 @@
 
             .btn.search-btn {
               border: none;
-              background-color: rgba($bodyTextColorTablet, 0.1);
-              color: $bodyTextColorTablet;
+              color: map-get($configuration, newsFeedSearchFieldTextColorTablet);
+              background-color: rgba(map-get($configuration, newsFeedSearchFieldTextColorTablet), 0.1);
 
               &:hover,
               &:active,
@@ -1734,6 +1760,19 @@
             .search-feed {
               background-color: rgba(map-get($configuration, newsFeedSearchFieldBackgroundColorDesktop), 1);
               color: map-get($configuration, newsFeedSearchFieldTextColorDesktop);
+
+              &::placeholder {
+                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorDesktop), 0.8);
+                opacity: 1;
+              }
+              
+              &:-ms-input-placeholder {
+                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorDesktop), 0.8);
+              }
+              
+              &::-ms-input-placeholder {
+                color: rgba(map-get($configuration, newsFeedSearchFieldTextColorDesktop), 0.8);
+              }
             }
 
             .fa {
@@ -1742,8 +1781,8 @@
 
             .btn.search-btn {
               border: none;
-              background-color: rgba($bodyTextColorDesktop, 0.1);
-              color: $bodyTextColorDesktop;
+              color: map-get($configuration, newsFeedSearchFieldTextColorDesktop);
+              background-color: rgba(map-get($configuration, newsFeedSearchFieldTextColorDesktop), 0.1);
 
               &:hover,
               &:active,

@@ -382,12 +382,7 @@
                       ".small-card-list-container .search-holder .form-control",
                       ".new-news-feed-list-container .search-holder .form-control",
                       ".news-feed-list-container .search-holder .form-control",
-                      ".simple-list-container .search-holder .form-control",
-                      ".new-small-card-list-container .search-holder .btn.search-btn",
-                      ".small-card-list-container .search-holder .btn.search-btn",
-                      ".new-news-feed-list-container .search-holder .btn.search-btn",
-                      ".news-feed-list-container .search-holder .btn.search-btn",
-                      ".simple-list-container .search-holder .btn.search-btn"
+                      ".simple-list-container .search-holder .form-control"
                     ],
                     "properties": ["color"]
                   }
@@ -3108,12 +3103,7 @@
                       ".small-card-list-container .search-holder .form-control",
                       ".new-news-feed-list-container .search-holder .form-control",
                       ".news-feed-list-container .search-holder .form-control",
-                      ".simple-list-container .search-holder .form-control",
-                      ".new-small-card-list-container .search-holder .btn.search-btn",
-                      ".small-card-list-container .search-holder .btn.search-btn",
-                      ".new-news-feed-list-container .search-holder .btn.search-btn",
-                      ".news-feed-list-container .search-holder .btn.search-btn",
-                      ".simple-list-container .search-holder .btn.search-btn"
+                      ".simple-list-container .search-holder .form-control"
                     ],
                     "properties": ["color"]
                   }
@@ -31326,7 +31316,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'][data-settings-layout='small-card']",
-                    "selectors": [".new-small-card-list-container .section-top-wrapper .search-holder .search-feed"],
+                    "selectors": [
+                      ".new-small-card-list-container .section-top-wrapper .search-holder .search-feed",
+                      ".new-small-card-list-container .search-holder .btn.search-btn"
+                    ],
                     "properties": ["color"]
                   }
                 ],
@@ -34154,7 +34147,11 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'][data-settings-layout='news-feed']",
-                    "selectors": [".new-news-feed-list-container .section-top-wrapper .search-holder .search-feed"],
+                    "selectors": [
+                      ".new-news-feed-list-container .section-top-wrapper .search-holder .search-feed",
+                      ".new-news-feed-list-container .search-holder .btn.search-btn",
+                      ".news-feed-list-container .search-holder .btn.search-btn"
+                    ],
                     "properties": ["color"]
                   }
                 ],
@@ -36936,7 +36933,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'][data-settings-layout='agenda']",
-                    "selectors": [".new-agenda-list-container .section-top-wrapper .search-holder .search-feed"],
+                    "selectors": [
+                      ".new-agenda-list-container .section-top-wrapper .search-holder .search-feed",
+                      ".new-agenda-card-list-container .search-holder .btn.search-btn"
+                    ],
                     "properties": ["color"]
                   }
                 ],
@@ -41911,7 +41911,10 @@
                 "styles": [
                   {
                     "parentSelector": "[data-widget-package='com.fliplet.dynamic-lists'][data-settings-layout='simple-list']",
-                    "selectors": [".simple-list-container .section-top-wrapper .search-holder .search-feed"],
+                    "selectors": [
+                      ".simple-list-container .section-top-wrapper .search-holder .search-feed",
+                      ".simple-list-container .search-holder .btn.search-btn"
+                    ],
                     "properties": ["color"]
                   }
                 ],

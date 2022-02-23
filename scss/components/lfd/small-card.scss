@@ -1227,8 +1227,8 @@
         }
         .btn.search-btn {
           border: none;
-          background-color: rgba($bodyTextColor, 0.1);
-          color: $bodyTextColor;
+          color: map-get($configuration, smallCardSearchFieldTextColor);
+          background-color: rgba(map-get($configuration, smallCardSearchFieldTextColor), 0.1);
 
           &:hover,
           &:active,
@@ -1249,6 +1249,19 @@
           .search-feed {
             background-color: rgba(map-get($configuration, smallCardSearchFieldBackgroundColor), 1);
             color: map-get($configuration, smallCardSearchFieldTextColor);
+
+            &::placeholder {
+              color: rgba(map-get($configuration, smallCardSearchFieldTextColor), 0.8);;
+              opacity: 1;
+            }
+            
+            &:-ms-input-placeholder {
+              color: rgba(map-get($configuration, smallCardSearchFieldTextColor), 0.8);;
+            }
+            
+            &::-ms-input-placeholder {
+              color: rgba(map-get($configuration, smallCardSearchFieldTextColor), 0.8);;
+            }
           }
 
           .fa {
@@ -1372,6 +1385,19 @@
             .search-feed {
               background-color: rgba(map-get($configuration, smallCardSearchFieldBackgroundColorTablet), 1);
               color: map-get($configuration, smallCardSearchFieldTextColorTablet);
+
+              &::placeholder {
+                color: rgba(map-get($configuration, smallCardSearchFieldTextColorTablet), 0.8);;
+                opacity: 1;
+              }
+              
+              &:-ms-input-placeholder {
+                color: rgba(map-get($configuration, smallCardSearchFieldTextColorTablet), 0.8);;
+              }
+              
+              &::-ms-input-placeholder {
+                color: rgba(map-get($configuration, smallCardSearchFieldTextColorTablet), 0.8);;
+              }
             }
 
             .fa {
@@ -1380,8 +1406,8 @@
 
             .btn.search-btn {
               border: none;
-              background-color: rgba($bodyTextColorTablet, 0.1);
-              color: $bodyTextColorTablet;
+              color: map-get($configuration, smallCardSearchFieldTextColorTablet);
+              background-color: rgba(map-get($configuration, smallCardSearchFieldTextColor), 0.1);
 
               &:hover,
               &:active,
@@ -1504,6 +1530,19 @@
             .search-feed {
               background-color: rgba(map-get($configuration, smallCardSearchFieldBackgroundColorDesktop), 1);
               color: map-get($configuration, smallCardSearchFieldTextColorDesktop);
+
+              &::placeholder {
+                color: rgba(map-get($configuration, smallCardSearchFieldTextColorDesktop), 0.8);;
+                opacity: 1;
+              }
+              
+              &:-ms-input-placeholder {
+                color: rgba(map-get($configuration, smallCardSearchFieldTextColorDesktop), 0.8);;
+              }
+              
+              &::-ms-input-placeholder {
+                color: rgba(map-get($configuration, smallCardSearchFieldTextColorDesktop), 0.8);;
+              }
             }
 
             .fa {
@@ -1512,8 +1551,8 @@
             
             .btn.search-btn {
               border: none;
-              background-color: rgba($bodyTextColorDesktop, 0.1);
-              color: $bodyTextColorDesktop;
+              color: map-get($configuration, smallCardSearchFieldTextColorDesktop);
+              background-color: rgba(map-get($configuration, smallCardSearchFieldTextColorDesktop), 0.1);
 
               &:hover,
               &:active,
