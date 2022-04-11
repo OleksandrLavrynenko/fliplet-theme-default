@@ -34142,7 +34142,7 @@
               },
               {
                 "name": "newsFeedSearchFieldTextColor",
-                "default": "$bodyTextColor",
+                "default": "$smallCardSearchFieldTextColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -34170,7 +34170,7 @@
               },
               {
                 "name": "newsFeedSearchFieldBackgroundColor",
-                "default": "$bodyBackground",
+                "default": "$smallCardSearchFieldBackgroundColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -36928,7 +36928,7 @@
               },
               {
                 "name": "agendaSearchFieldTextColor",
-                "default": "$bodyTextColor",
+                "default": "$smallCardSearchFieldTextColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -36955,7 +36955,7 @@
               },
               {
                 "name": "agendaSearchFieldBackgroundColor",
-                "default": "$bodyBackground",
+                "default": "$smallCardSearchFieldBackgroundColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -41906,7 +41906,7 @@
               
               {
                 "name": "simpleListSearchFieldTextColor",
-                "default": "$bodyTextColor",
+                "default": "$smallCardSearchFieldTextColor",
                 "columns": 12,
                 "styles": [
                   {
@@ -41933,7 +41933,7 @@
               },
               {
                 "name": "simpleListSearchFieldBackgroundColor",
-                "default": "$bodyBackground",
+                "default": "$smallCardSearchFieldBackgroundColor",
                 "columns": 12,
                 "styles": [
                   {
